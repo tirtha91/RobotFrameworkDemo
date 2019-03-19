@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190319 16:01:56.779" generator="Robot 3.1.1 (Python 3.5.2 on win32)">
+<suite source="F:\Demo_Development\Java_Project\RobotFramework_Demo\src\test\OrangeHRMLogin.robot" name="OrangeHRMLogin" id="s1">
+<test name="OrangeHRMLoginTest" id="s1-t1">
+<kw name="Open OrangeHRM" type="setup" library="OrangeHRMLibs">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20190319 16:01:58.004" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status starttime="20190319 16:01:58.003" endtime="20190319 16:02:09.259" status="PASS"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status starttime="20190319 16:02:09.260" endtime="20190319 16:02:10.431" status="PASS"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status starttime="20190319 16:02:10.431" endtime="20190319 16:02:10.431" status="PASS"></status>
+</kw>
+<status starttime="20190319 16:01:58.001" endtime="20190319 16:02:10.431" status="PASS"></status>
+</kw>
+<kw name="OrangeHRM website login" library="OrangeHRMLibs">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${OrangeHRMUserName}</arg>
+<arg>&amp;{LoginData}[username]</arg>
+</arguments>
+<msg timestamp="20190319 16:02:10.447" level="INFO">Typing text 'Admin' into text field '//input[@name='txtUsername']'.</msg>
+<status starttime="20190319 16:02:10.447" endtime="20190319 16:02:10.769" status="PASS"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${OrangeHRMPasswordField}</arg>
+<arg>&amp;{LoginData}[password]</arg>
+</arguments>
+<msg timestamp="20190319 16:02:10.772" level="INFO">Typing password into text field '//input[@name='txtPassword']'.</msg>
+<status starttime="20190319 16:02:10.770" endtime="20190319 16:02:11.092" status="PASS"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${OrangeHRMSignInBtn}</arg>
+</arguments>
+<msg timestamp="20190319 16:02:11.094" level="INFO">Clicking button '//input[@name='Submit']'.</msg>
+<status starttime="20190319 16:02:11.093" endtime="20190319 16:02:16.577" status="PASS"></status>
+</kw>
+<status starttime="20190319 16:02:10.431" endtime="20190319 16:02:16.578" status="PASS"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This test was executed on %{os}</arg>
+</arguments>
+<msg timestamp="20190319 16:02:16.582" level="INFO">This test was executed on Windows_NT</msg>
+<status starttime="20190319 16:02:16.580" endtime="20190319 16:02:16.583" status="PASS"></status>
+</kw>
+<kw name="Close Browser" type="teardown" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status starttime="20190319 16:02:16.585" endtime="20190319 16:02:19.169" status="PASS"></status>
+</kw>
+<doc>This is to test the login feature</doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status starttime="20190319 16:01:57.998" critical="yes" endtime="20190319 16:02:19.169" status="PASS"></status>
+</test>
+<test name="OrangeHRMVerifyLogin" id="s1-t2">
+<kw name="Open OrangeHRM" type="setup" library="OrangeHRMLibs">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20190319 16:02:19.169" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status starttime="20190319 16:02:19.169" endtime="20190319 16:02:26.964" status="PASS"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status starttime="20190319 16:02:26.965" endtime="20190319 16:02:28.133" status="PASS"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status starttime="20190319 16:02:28.133" endtime="20190319 16:02:28.133" status="PASS"></status>
+</kw>
+<status starttime="20190319 16:02:19.169" endtime="20190319 16:02:28.133" status="PASS"></status>
+</kw>
+<kw name="OrangeHRM website login" library="OrangeHRMLibs">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${OrangeHRMUserName}</arg>
+<arg>&amp;{LoginData}[username]</arg>
+</arguments>
+<msg timestamp="20190319 16:02:28.133" level="INFO">Typing text 'Admin' into text field '//input[@name='txtUsername']'.</msg>
+<status starttime="20190319 16:02:28.133" endtime="20190319 16:02:28.456" status="PASS"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${OrangeHRMPasswordField}</arg>
+<arg>&amp;{LoginData}[password]</arg>
+</arguments>
+<msg timestamp="20190319 16:02:28.460" level="INFO">Typing password into text field '//input[@name='txtPassword']'.</msg>
+<status starttime="20190319 16:02:28.457" endtime="20190319 16:02:28.781" status="PASS"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${OrangeHRMSignInBtn}</arg>
+</arguments>
+<msg timestamp="20190319 16:02:28.784" level="INFO">Clicking button '//input[@name='Submit']'.</msg>
+<status starttime="20190319 16:02:28.782" endtime="20190319 16:02:34.096" status="PASS"></status>
+</kw>
+<status starttime="20190319 16:02:28.133" endtime="20190319 16:02:34.097" status="PASS"></status>
+</kw>
+<kw name="OrangeHRM website login verification" library="OrangeHRMLibs">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${OrangeHRMLoggedUSer}</arg>
+</arguments>
+<assign>
+<var>${LoginUser}</var>
+</assign>
+<msg timestamp="20190319 16:02:34.239" level="INFO">${LoginUser} = Welcome Admin</msg>
+<status starttime="20190319 16:02:34.101" endtime="20190319 16:02:34.240" status="PASS"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${LoginUser}</arg>
+</arguments>
+<msg timestamp="20190319 16:02:34.241" level="INFO">Welcome Admin</msg>
+<status starttime="20190319 16:02:34.240" endtime="20190319 16:02:34.242" status="PASS"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${OrangeHRMLoggedUser}</arg>
+</arguments>
+<msg timestamp="20190319 16:02:34.244" level="INFO">Clicking element '//a[@class='panelTrigger']'.</msg>
+<status starttime="20190319 16:02:34.242" endtime="20190319 16:02:34.441" status="PASS"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${OrangeHRMLogout}</arg>
+</arguments>
+<msg timestamp="20190319 16:02:34.444" level="INFO">Clicking element '//a[text()='Logout']'.</msg>
+<status starttime="20190319 16:02:34.442" endtime="20190319 16:02:35.743" status="PASS"></status>
+</kw>
+<status starttime="20190319 16:02:34.099" endtime="20190319 16:02:35.744" status="PASS"></status>
+</kw>
+<kw name="Close Browser" type="teardown" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status starttime="20190319 16:02:35.747" endtime="20190319 16:02:38.056" status="PASS"></status>
+</kw>
+<doc>This is to verify the logged in User and then logout</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status starttime="20190319 16:02:19.169" critical="yes" endtime="20190319 16:02:38.056" status="PASS"></status>
+</test>
+<test name="SmokeTestCase" id="s1-t3">
+<kw name="Open OrangeHRM" type="setup" library="OrangeHRMLibs">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20190319 16:02:38.056" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status starttime="20190319 16:02:38.056" endtime="20190319 16:02:46.062" status="PASS"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status starttime="20190319 16:02:46.064" endtime="20190319 16:02:47.231" status="PASS"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status starttime="20190319 16:02:47.231" endtime="20190319 16:02:47.231" status="PASS"></status>
+</kw>
+<status starttime="20190319 16:02:38.056" endtime="20190319 16:02:47.231" status="PASS"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>This is a smoke test case</arg>
+</arguments>
+<status starttime="20190319 16:02:47.231" endtime="20190319 16:02:47.247" status="PASS"></status>
+</kw>
+<kw name="Close Browser" type="teardown" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status starttime="20190319 16:02:47.247" endtime="20190319 16:02:49.482" status="PASS"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status starttime="20190319 16:02:38.056" critical="yes" endtime="20190319 16:02:49.482" status="PASS"></status>
+</test>
+<status starttime="20190319 16:01:56.793" endtime="20190319 16:02:49.482" status="PASS"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Sanity</stat>
+<stat fail="0" pass="2">Smoke</stat>
+</tag>
+<suite>
+<stat fail="0" name="OrangeHRMLogin" id="s1" pass="3">OrangeHRMLogin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
